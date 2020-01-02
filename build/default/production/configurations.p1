@@ -1,0 +1,67 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"5 configurations.c
+[p x FOSC = INTIO67 ]
+"6
+[p x PLLCFG = OFF ]
+"7
+[p x PRICLKEN = ON ]
+"8
+[p x FCMEN = OFF ]
+"9
+[p x IESO = OFF ]
+"12
+[p x PWRTEN = OFF ]
+"13
+[p x BOREN = SBORDIS ]
+"14
+[p x BORV = 190 ]
+"17
+[p x WDTEN = OFF ]
+"18
+[p x WDTPS = 32768 ]
+"21
+[p x CCP2MX = PORTC1 ]
+"22
+[p x PBADEN = ON ]
+"23
+[p x CCP3MX = PORTB5 ]
+"24
+[p x HFOFST = ON ]
+"25
+[p x T3CMX = PORTC0 ]
+"26
+[p x P2BMX = PORTD2 ]
+"27
+[p x MCLRE = EXTMCLR ]
+"30
+[p x STVREN = ON ]
+"31
+[p x LVP = ON ]
+"32
+[p x XINST = OFF ]
+"33
+[p x DEBUG = OFF ]
+"36
+[p x CP0 = OFF ]
+"37
+[p x CP1 = OFF ]
+"40
+[p x CPB = OFF ]
+"41
+[p x CPD = OFF ]
+"44
+[p x WRT0 = OFF ]
+"45
+[p x WRT1 = OFF ]
+"48
+[p x WRTC = OFF ]
+"49
+[p x WRTB = OFF ]
+"50
+[p x WRTD = OFF ]
+"53
+[p x EBTR0 = OFF ]
+"54
+[p x EBTR1 = OFF ]
+"57
+[p x EBTRB = OFF ]
