@@ -810,6 +810,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_Value
 -> 0 `i
 ]
+"35 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
+[v _ADC_VALUE `i ~T0 @X0 1 e ]
+[i _ADC_VALUE
+-> 0 `i
+]
+"36
+[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
+[v _digital_value `uc ~T0 @X0 1 e ]
+[i _digital_value
+-> -> 0 `i `uc
+]
+"37
+[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 e ]
+[i _recived
+-> -> 0 `i `uc
+]
+"38
+[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 e ]
+[i _msg
+-> -> 0 `i `uc
+]
 "6 SPI.c
 [; ;SPI.c: 6: void SPI1_Initialize(void)
 [v _SPI1_Initialize `(v ~T0 @X0 1 ef ]

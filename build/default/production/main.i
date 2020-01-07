@@ -9633,6 +9633,12 @@ void WAIT_ADC(void);
 # 38 "./PIC_SETUP.h" 2
 # 1 "./Interrupt_Service_Routine.h" 1
 # 35 "./Interrupt_Service_Routine.h"
+int ADC_VALUE = 0;
+char digital_value = 0;
+uint8_t recived = 0x00;
+uint8_t msg = 0x00;
+
+
 void __attribute__((picinterrupt(("")))) ISR(void);
 # 39 "./PIC_SETUP.h" 2
 # 1 "./SPI.h" 1
@@ -9654,24 +9660,27 @@ void init_interrupts(void);
 void main(void) {
     SETUP();
 
-    uint8_t recived = 0x00;
-    uint8_t msg = 0x00;
+
+
     while(1)
     {
-        recived = SPI1_ExchangeByte(msg);
+        START_ADC();
+
+
 
         if(recived==0xFF){
             msg = 0x09;
-            LATB = 0x03;
+
         }
         else if(recived==0x01){
-            msg = 0x0A;
+            msg = ADC_VALUE;
         }
         else if(recived==0x03){
-            msg = 0x0B;
+            msg = digital_value;
         }
         else{
             msg = 0x00;
         }
+        SSP1BUF = msg;
     }
 }

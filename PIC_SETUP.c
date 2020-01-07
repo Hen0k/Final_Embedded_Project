@@ -52,7 +52,7 @@ void init_pins()
     ANSELBbits.ANSB5 = 0;
     
     // Pin setup for the ADC
-    TRISA0 = 1;
+    TRISAbits.RA0 = 1;
     ANSELAbits.ANSA0 = 1;;
     
     // Pin setup for Actuator (LED))
@@ -62,6 +62,10 @@ void init_pins()
     // For Debugging
     TRISC0 = 0;
     TRISC1 = 0;
+    TRISC2 = 0;
+    LATCbits.LATC0 = 0;
+    LATCbits.LATC1 = 0;
+    LATCbits.LATC2 = 0;
 }
 
 void init_interrupts()

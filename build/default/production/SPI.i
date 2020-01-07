@@ -9627,6 +9627,12 @@ void WAIT_ADC(void);
 # 38 "./PIC_SETUP.h" 2
 # 1 "./Interrupt_Service_Routine.h" 1
 # 35 "./Interrupt_Service_Routine.h"
+int ADC_VALUE = 0;
+char digital_value = 0;
+uint8_t recived = 0x00;
+uint8_t msg = 0x00;
+
+
 void __attribute__((picinterrupt(("")))) ISR(void);
 # 39 "./PIC_SETUP.h" 2
 # 1 "./SPI.h" 1

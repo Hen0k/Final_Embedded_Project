@@ -5,6 +5,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;./PIC_SETUP.h: 42: void init_pins(void);
 [v _init_pins `(v ~T0 @X0 0 ef ]
+"43
+[; ;./PIC_SETUP.h: 43: void init_interrupts(void);
+[v _init_interrupts `(v ~T0 @X0 0 ef ]
 "37 ./ADC.h
 [; ;./ADC.h: 37: void INIT_ADC(void);
 [v _INIT_ADC `(v ~T0 @X0 0 ef ]
@@ -92,9 +95,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 112: extern volatile ANSELBbits_t ANSELBbits __attribute__((address(0xF39)));
 [v _ANSELBbits `VS3 ~T0 @X0 0 e@3897 ]
-"20407
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20407: extern volatile __bit TRISA0 __attribute__((address(0x7C90)));
-[v _TRISA0 `Vb ~T0 @X0 0 e@31888 ]
+"8071
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 8071:     struct {
+[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S390 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"8081
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 8081:     struct {
+[s S391 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S391 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"8070
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 8070: typedef union {
+[u S389 `S390 1 `S391 1 ]
+[n S389 . . . ]
+"8092
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 8092: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS389 ~T0 @X0 0 e@3986 ]
 "20494
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20494: extern volatile __bit TRISD5 __attribute__((address(0x7CAD)));
 [v _TRISD5 `Vb ~T0 @X0 0 e@31917 ]
@@ -115,6 +130,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20458
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20458: extern volatile __bit TRISC1 __attribute__((address(0x7CA1)));
 [v _TRISC1 `Vb ~T0 @X0 0 e@31905 ]
+"20461
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20461: extern volatile __bit TRISC2 __attribute__((address(0x7CA2)));
+[v _TRISC2 `Vb ~T0 @X0 0 e@31906 ]
+"7790
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7790:     struct {
+[s S381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S381 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"7800
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7800:     struct {
+[s S382 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S382 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"7789
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7789: typedef union {
+[u S380 `S381 1 `S382 1 ]
+[n S380 . . . ]
+"7811
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS380 ~T0 @X0 0 e@3979 ]
 "9497
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9497:     struct {
 [s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -940,6 +973,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_Value
 -> 0 `i
 ]
+"35 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
+[v _ADC_VALUE `i ~T0 @X0 1 e ]
+[i _ADC_VALUE
+-> 0 `i
+]
+"36
+[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
+[v _digital_value `uc ~T0 @X0 1 e ]
+[i _digital_value
+-> -> 0 `i `uc
+]
+"37
+[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 e ]
+[i _recived
+-> -> 0 `i `uc
+]
+"38
+[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 e ]
+[i _msg
+-> -> 0 `i `uc
+]
 "5 PIC_SETUP.c
 [; ;PIC_SETUP.c: 5: void SETUP()
 [v _SETUP `(v ~T0 @X0 1 ef ]
@@ -954,6 +1011,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8
 [; ;PIC_SETUP.c: 8:     init_pins();
 [e ( _init_pins ..  ]
+"9
+[; ;PIC_SETUP.c: 9:     init_interrupts();
+[e ( _init_interrupts ..  ]
 "10
 [; ;PIC_SETUP.c: 10:     INIT_ADC();
 [e ( _INIT_ADC ..  ]
@@ -1024,8 +1084,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PIC_SETUP.c: 52:     ANSELBbits.ANSB5 = 0;
 [e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 "55
-[; ;PIC_SETUP.c: 55:     TRISA0 = 1;
-[e = _TRISA0 -> -> 1 `i `b ]
+[; ;PIC_SETUP.c: 55:     TRISAbits.RA0 = 1;
+[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
 "56
 [; ;PIC_SETUP.c: 56:     ANSELAbits.ANSA0 = 1;;
 [e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
@@ -1042,48 +1102,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PIC_SETUP.c: 64:     TRISC1 = 0;
 [e = _TRISC1 -> -> 0 `i `b ]
 "65
-[; ;PIC_SETUP.c: 65: }
+[; ;PIC_SETUP.c: 65:     TRISC2 = 0;
+[e = _TRISC2 -> -> 0 `i `b ]
+"66
+[; ;PIC_SETUP.c: 66:     LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"67
+[; ;PIC_SETUP.c: 67:     LATCbits.LATC1 = 0;
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
+"68
+[; ;PIC_SETUP.c: 68:     LATCbits.LATC2 = 0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+"69
+[; ;PIC_SETUP.c: 69: }
 [e :UE 853 ]
 }
-"67
-[; ;PIC_SETUP.c: 67: void init_interrupts()
+"71
+[; ;PIC_SETUP.c: 71: void init_interrupts()
 [v _init_interrupts `(v ~T0 @X0 1 ef ]
-"68
-[; ;PIC_SETUP.c: 68: {
+"72
+[; ;PIC_SETUP.c: 72: {
 {
 [e :U _init_interrupts ]
 [f ]
-"70
-[; ;PIC_SETUP.c: 70:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"71
-[; ;PIC_SETUP.c: 71:     PIE1bits.SSP1IE = 1;
-[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "74
-[; ;PIC_SETUP.c: 74:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;PIC_SETUP.c: 74:     PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "75
-[; ;PIC_SETUP.c: 75:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+[; ;PIC_SETUP.c: 75:     PIE1bits.SSP1IE = 1;
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "78
-[; ;PIC_SETUP.c: 78:     INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;PIC_SETUP.c: 78:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "79
-[; ;PIC_SETUP.c: 79:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;PIC_SETUP.c: 79:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "82
-[; ;PIC_SETUP.c: 82:     IOCBbits.IOCB5 = 1;
+[; ;PIC_SETUP.c: 82:     INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"83
+[; ;PIC_SETUP.c: 83:     INTCONbits.RBIE = 1;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"86
+[; ;PIC_SETUP.c: 86:     IOCBbits.IOCB5 = 1;
 [e = . . _IOCBbits 0 2 -> -> 1 `i `uc ]
-"85
-[; ;PIC_SETUP.c: 85:     IPEN = 0;
+"89
+[; ;PIC_SETUP.c: 89:     IPEN = 0;
 [e = _IPEN -> -> 0 `i `b ]
-"88
-[; ;PIC_SETUP.c: 88:     INTCONbits.PEIE =1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"91
-[; ;PIC_SETUP.c: 91:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "92
-[; ;PIC_SETUP.c: 92: }
+[; ;PIC_SETUP.c: 92:     INTCONbits.PEIE =1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"95
+[; ;PIC_SETUP.c: 95:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"96
+[; ;PIC_SETUP.c: 96: }
 [e :UE 854 ]
 }

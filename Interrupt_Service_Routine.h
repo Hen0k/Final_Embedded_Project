@@ -32,6 +32,12 @@
 #define	XC_PIC_ISR_H
 #include <pic18f43k22.h>
 #include "ADC.h"
+int ADC_VALUE = 0;
+char digital_value = 0;
+uint8_t recived = 0x00;
+uint8_t msg = 0x00;
+
+
 void __interrupt() ISR(void);
 
 #endif	/* XC_HEADER_TEMPLATE_H */

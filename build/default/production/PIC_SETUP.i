@@ -9624,6 +9624,12 @@ void WAIT_ADC(void);
 # 38 "./PIC_SETUP.h" 2
 # 1 "./Interrupt_Service_Routine.h" 1
 # 35 "./Interrupt_Service_Routine.h"
+int ADC_VALUE = 0;
+char digital_value = 0;
+uint8_t recived = 0x00;
+uint8_t msg = 0x00;
+
+
 void __attribute__((picinterrupt(("")))) ISR(void);
 # 39 "./PIC_SETUP.h" 2
 # 1 "./SPI.h" 1
@@ -9647,7 +9653,7 @@ void SETUP()
 {
     set_oscilators();
     init_pins();
-
+    init_interrupts();
     INIT_ADC();
     SPI1_Initialize();
 }
@@ -9693,7 +9699,7 @@ void init_pins()
     ANSELBbits.ANSB5 = 0;
 
 
-    TRISA0 = 1;
+    TRISAbits.RA0 = 1;
     ANSELAbits.ANSA0 = 1;;
 
 
@@ -9703,6 +9709,10 @@ void init_pins()
 
     TRISC0 = 0;
     TRISC1 = 0;
+    TRISC2 = 0;
+    LATCbits.LATC0 = 0;
+    LATCbits.LATC1 = 0;
+    LATCbits.LATC2 = 0;
 }
 
 void init_interrupts()

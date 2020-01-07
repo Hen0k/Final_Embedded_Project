@@ -3,92 +3,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 [t T2 __interrupt ]
 "9497 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9497:     struct {
-[s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S436 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
 "9506
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9506:     struct {
-[s S437 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S437 . . SSPIF TXIF RCIF ]
+[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S442 . . SSPIF TXIF RCIF ]
 "9496
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9496: typedef union {
-[u S435 `S436 1 `S437 1 ]
-[n S435 . . . ]
+[u S440 `S441 1 `S442 1 ]
+[n S440 . . . ]
 "9513
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS435 ~T0 @X0 0 e@3998 ]
+[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
+"18754
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18754: extern volatile __bit LATC2 __attribute__((address(0x7C5A)));
+[v _LATC2 `Vb ~T0 @X0 0 e@31834 ]
+"14114
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14114:     struct {
+[s S668 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S668 . SSPM CKP SSPEN SSPOV WCOL ]
+"14121
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14121:     struct {
+[s S669 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S669 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"14127
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14127:     struct {
+[s S670 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S670 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
+"14113
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14113: typedef union {
+[u S667 `S668 1 `S669 1 `S670 1 ]
+[n S667 . . . . ]
+"14138
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14138: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
+[v _SSP1CON1bits `VS667 ~T0 @X0 0 e@4038 ]
+"15225
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15225: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
 "18748
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18748: extern volatile __bit LATC0 __attribute__((address(0x7C58)));
 [v _LATC0 `Vb ~T0 @X0 0 e@31832 ]
-"38 ./ADC.h
-[; ;./ADC.h: 38: void START_ADC(void);
-[v _START_ADC `(v ~T0 @X0 0 ef ]
-"39
+"39 ./ADC.h
 [; ;./ADC.h: 39: void WAIT_ADC(void);
 [v _WAIT_ADC `(v ~T0 @X0 0 ef ]
-"13729 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13729: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
-[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"13709 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13709: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
 "16898
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16898:     struct {
-[s S818 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S818 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+[s S823 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S823 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
 "16908
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16908:     struct {
-[s S819 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S819 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+[s S824 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S824 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
 "16918
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16918:     struct {
-[s S820 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S820 . . GIEL GIEH ]
+[s S825 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S825 . . GIEL GIEH ]
 "16897
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16897: typedef union {
-[u S817 `S818 1 `S819 1 `S820 1 ]
-[n S817 . . . . ]
+[u S822 `S823 1 `S824 1 `S825 1 ]
+[n S822 . . . . ]
 "16924
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16924: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS817 ~T0 @X0 0 e@4082 ]
+[v _INTCONbits `VS822 ~T0 @X0 0 e@4082 ]
 "18751
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18751: extern volatile __bit LATC1 __attribute__((address(0x7C59)));
 [v _LATC1 `Vb ~T0 @X0 0 e@31833 ]
 "6571
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6571:     struct {
-[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S341 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+[s S346 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
 "6581
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6581:     struct {
-[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S342 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+[s S347 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
 "6591
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6591:     struct {
-[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S343 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+[s S348 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S348 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
 "6601
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6601:     struct {
-[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S344 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+[s S349 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S349 . FLT0 C12IN3M . C12IN2M T5G T1G ]
 "6609
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6609:     struct {
-[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S345 . SRI C12IN3N . C12IN2N . CCP3 ]
+[s S350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S350 . SRI C12IN3N . C12IN2N . CCP3 ]
 "6617
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6617:     struct {
-[s S346 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S346 . . CTED1 CTED2 . T3CKI ]
+[s S351 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S351 . . CTED1 CTED2 . T3CKI ]
 "6624
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6624:     struct {
-[s S347 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S347 . . P2A . P3A ]
+[s S352 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S352 . . P2A . P3A ]
 "6630
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6630:     struct {
-[s S348 :3 `uc 1 :1 `uc 1 ]
-[n S348 . . CCP2_PA2 ]
+[s S353 :3 `uc 1 :1 `uc 1 ]
+[n S353 . . CCP2_PA2 ]
 "6570
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6570: typedef union {
-[u S340 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 ]
-[n S340 . . . . . . . . . ]
+[u S345 `S346 1 `S347 1 `S348 1 `S349 1 `S350 1 `S351 1 `S352 1 `S353 1 ]
+[n S345 . . . . . . . . . ]
 "6635
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6635: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-[v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
+[v _PORTBbits `VS345 ~T0 @X0 0 e@3969 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -851,20 +873,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_Value
 -> 0 `i
 ]
-"3 Interrupt_Service_Routine.c
-[; ;Interrupt_Service_Routine.c: 3: int ADC_VALUE = 0;
+"35 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
 [v _ADC_VALUE `i ~T0 @X0 1 e ]
 [i _ADC_VALUE
 -> 0 `i
 ]
-"4
-[; ;Interrupt_Service_Routine.c: 4: char digital_value = 0;
+"36
+[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
 [v _digital_value `uc ~T0 @X0 1 e ]
 [i _digital_value
 -> -> 0 `i `uc
 ]
+"37
+[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 e ]
+[i _recived
+-> -> 0 `i `uc
+]
+"38
+[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 e ]
+[i _msg
+-> -> 0 `i `uc
+]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"5
+"5 Interrupt_Service_Routine.c
 [; ;Interrupt_Service_Routine.c: 5: void __attribute__((picinterrupt(("")))) ISR(void)
 [v _ISR `(v ~T2 @X0 1 ef ]
 "6
@@ -872,51 +906,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _ISR ]
 [f ]
-"16
-[; ;Interrupt_Service_Routine.c: 16:     if(PIR1bits.ADIF == 1)
-[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 852  ]
-"17
-[; ;Interrupt_Service_Routine.c: 17:     {
+"8
+[; ;Interrupt_Service_Routine.c: 8:     if(PIR1bits.SSP1IF == 1)
+[e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 852  ]
+"9
+[; ;Interrupt_Service_Routine.c: 9:     {
 {
-"18
-[; ;Interrupt_Service_Routine.c: 18:         LATC0 = 1;
-[e = _LATC0 -> -> 1 `i `b ]
-"19
-[; ;Interrupt_Service_Routine.c: 19:         START_ADC();
-[e ( _START_ADC ..  ]
-"20
-[; ;Interrupt_Service_Routine.c: 20:         WAIT_ADC();
-[e ( _WAIT_ADC ..  ]
-"21
-[; ;Interrupt_Service_Routine.c: 21:         ADC_VALUE = ADRESH;
-[e = _ADC_VALUE -> _ADRESH `i ]
-"22
-[; ;Interrupt_Service_Routine.c: 22:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"23
-[; ;Interrupt_Service_Routine.c: 23:     }
+"10
+[; ;Interrupt_Service_Routine.c: 10:         LATC2 = !LATC2;
+[e = _LATC2 ! _LATC2 ]
+"11
+[; ;Interrupt_Service_Routine.c: 11:         if(SSP1CON1bits.WCOL) SSP1CON1bits.WCOL = 0;
+[e $ ! != -> . . _SSP1CON1bits 0 4 `i -> 0 `i 853  ]
+[e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
+[e :U 853 ]
+"12
+[; ;Interrupt_Service_Routine.c: 12:         recived = SSP1BUF;
+[e = _recived _SSP1BUF ]
+"14
+[; ;Interrupt_Service_Routine.c: 14:         PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"15
+[; ;Interrupt_Service_Routine.c: 15:     }
 }
 [e :U 852 ]
-"27
-[; ;Interrupt_Service_Routine.c: 27:     if(INTCONbits.RBIF == 1)
-[e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 853  ]
-"28
-[; ;Interrupt_Service_Routine.c: 28:     {
+"19
+[; ;Interrupt_Service_Routine.c: 19:     if(PIR1bits.ADIF == 1)
+[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 854  ]
+"20
+[; ;Interrupt_Service_Routine.c: 20:     {
 {
-"29
-[; ;Interrupt_Service_Routine.c: 29:         LATC1 = !LATC1;
-[e = _LATC1 ! _LATC1 ]
-"30
-[; ;Interrupt_Service_Routine.c: 30:         digital_value = PORTBbits.RB5;
-[e = _digital_value -> . . _PORTBbits 0 5 `uc ]
-"31
-[; ;Interrupt_Service_Routine.c: 31:         INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"32
-[; ;Interrupt_Service_Routine.c: 32:     }
+"21
+[; ;Interrupt_Service_Routine.c: 21:         LATC0 = !LATC0;
+[e = _LATC0 ! _LATC0 ]
+"23
+[; ;Interrupt_Service_Routine.c: 23:         WAIT_ADC();
+[e ( _WAIT_ADC ..  ]
+"24
+[; ;Interrupt_Service_Routine.c: 24:         ADC_VALUE = ADRESL;
+[e = _ADC_VALUE -> _ADRESL `i ]
+"26
+[; ;Interrupt_Service_Routine.c: 26:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"27
+[; ;Interrupt_Service_Routine.c: 27:     }
 }
-[e :U 853 ]
+[e :U 854 ]
+"31
+[; ;Interrupt_Service_Routine.c: 31:     if(INTCONbits.RBIF == 1)
+[e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 855  ]
+"32
+[; ;Interrupt_Service_Routine.c: 32:     {
+{
 "33
-[; ;Interrupt_Service_Routine.c: 33: }
+[; ;Interrupt_Service_Routine.c: 33:         LATC1 = !LATC1;
+[e = _LATC1 ! _LATC1 ]
+"34
+[; ;Interrupt_Service_Routine.c: 34:         digital_value = PORTBbits.RB5;
+[e = _digital_value -> . . _PORTBbits 0 5 `uc ]
+"36
+[; ;Interrupt_Service_Routine.c: 36:         INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"37
+[; ;Interrupt_Service_Routine.c: 37:     }
+}
+[e :U 855 ]
+"38
+[; ;Interrupt_Service_Routine.c: 38: }
 [e :UE 851 ]
 }

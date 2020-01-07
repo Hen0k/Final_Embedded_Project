@@ -9620,6 +9620,12 @@ typedef uint32_t uint_fast32_t;
 # 34 "./Interrupt_Service_Routine.h"
 # 1 "./ADC.h" 1
 # 35 "./Interrupt_Service_Routine.h" 2
+int ADC_VALUE = 0;
+char digital_value = 0;
+uint8_t recived = 0x00;
+uint8_t msg = 0x00;
+
+
 void __attribute__((picinterrupt(("")))) ISR(void);
 # 39 "./PIC_SETUP.h" 2
 # 1 "./SPI.h" 1
@@ -9647,13 +9653,17 @@ void WAIT_ADC(void);
 
 void INIT_ADC(void)
 {
-    ANSELA = 0x01;
 
-    ADCON2bits.ADFM = 0;
-    ADCON2bits.ACQT = 0b000;
-    ADCON2bits.ADCS = 0b111;
-    ADCON1 = 0x00;
-    ADCON0bits.ADON = 1;
+
+
+
+
+    ADCON0 = 0x01;
+    ADCON2 = 0x87;
+
+
+
+
 }
 
 void START_ADC(void)

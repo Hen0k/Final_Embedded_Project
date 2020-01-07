@@ -1,25 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"52 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 52: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
-"13444
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13444:     struct {
-[s S633 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S633 . ADCS ACQT . ADFM ]
-"13450
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13450:     struct {
-[s S634 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S634 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
-"13443
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13443: typedef union {
-[u S632 `S633 1 `S634 1 ]
-[n S632 . . . ]
-"13459
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13459: extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
-[v _ADCON2bits `VS632 ~T0 @X0 0 e@4032 ]
-"13509
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13509: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"13577 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13577: extern volatile unsigned char ADCON0 __attribute__((address(0xFC2)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"13438
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13438: extern volatile unsigned char ADCON2 __attribute__((address(0xFC0)));
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
 "13583
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13583:     struct {
 [s S640 :1 `uc 1 :1 `uc 1 ]
@@ -815,6 +800,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"35 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
+[v _ADC_VALUE `i ~T0 @X0 1 e ]
+[i _ADC_VALUE
+-> 0 `i
+]
+"36
+[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
+[v _digital_value `uc ~T0 @X0 1 e ]
+[i _digital_value
+-> -> 0 `i `uc
+]
+"37
+[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 e ]
+[i _recived
+-> -> 0 `i `uc
+]
+"38
+[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 e ]
+[i _msg
+-> -> 0 `i `uc
+]
 "35 ./ADC.h
 [; ;./ADC.h: 35: int ADC_Value = 0;
 [v _ADC_Value `i ~T0 @X0 1 e ]
@@ -829,59 +838,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _INIT_ADC ]
 [f ]
-"6
-[; ;ADC.c: 6:     ANSELA = 0x01;
-[e = _ANSELA -> -> 1 `i `uc ]
-"8
-[; ;ADC.c: 8:     ADCON2bits.ADFM = 0;
-[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
-"9
-[; ;ADC.c: 9:     ADCON2bits.ACQT = 0b000;
-[e = . . _ADCON2bits 0 1 -> -> 0 `i `uc ]
-"10
-[; ;ADC.c: 10:     ADCON2bits.ADCS = 0b111;
-[e = . . _ADCON2bits 0 0 -> -> 7 `i `uc ]
 "11
-[; ;ADC.c: 11:     ADCON1 = 0x00;
-[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;ADC.c: 11:     ADCON0 = 0x01;
+[e = _ADCON0 -> -> 1 `i `uc ]
 "12
-[; ;ADC.c: 12:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"13
-[; ;ADC.c: 13: }
+[; ;ADC.c: 12:     ADCON2 = 0x87;
+[e = _ADCON2 -> -> 135 `i `uc ]
+"17
+[; ;ADC.c: 17: }
 [e :UE 851 ]
 }
-"15
-[; ;ADC.c: 15: void START_ADC(void)
+"19
+[; ;ADC.c: 19: void START_ADC(void)
 [v _START_ADC `(v ~T0 @X0 1 ef ]
-"16
-[; ;ADC.c: 16: {
+"20
+[; ;ADC.c: 20: {
 {
 [e :U _START_ADC ]
 [f ]
-"17
-[; ;ADC.c: 17:     ADCON0bits.GO = 1;
+"21
+[; ;ADC.c: 21:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"18
-[; ;ADC.c: 18: }
+"22
+[; ;ADC.c: 22: }
 [e :UE 852 ]
 }
-"20
-[; ;ADC.c: 20: void WAIT_ADC(void)
+"24
+[; ;ADC.c: 24: void WAIT_ADC(void)
 [v _WAIT_ADC `(v ~T0 @X0 1 ef ]
-"21
-[; ;ADC.c: 21: {
+"25
+[; ;ADC.c: 25: {
 {
 [e :U _WAIT_ADC ]
 [f ]
-"22
-[; ;ADC.c: 22:     while(ADCON0bits.GO==1);
+"26
+[; ;ADC.c: 26:     while(ADCON0bits.GO==1);
 [e $U 854  ]
 [e :U 855 ]
 [e :U 854 ]
 [e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 855  ]
 [e :U 856 ]
-"23
-[; ;ADC.c: 23: }
+"27
+[; ;ADC.c: 27: }
 [e :UE 853 ]
 }

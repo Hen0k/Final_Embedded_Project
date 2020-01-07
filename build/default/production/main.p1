@@ -3,12 +3,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40 ./PIC_SETUP.h
 [; ;./PIC_SETUP.h: 40: void SETUP(void);
 [v _SETUP `(v ~T0 @X0 0 ef ]
-"39 ./SPI.h
-[; ;./SPI.h: 39: unsigned char SPI1_ExchangeByte(uint8_t data);
-[v _SPI1_ExchangeByte `(uc ~T0 @X0 0 ef1`uc ]
-"7672 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7672: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"38 ./ADC.h
+[; ;./ADC.h: 38: void START_ADC(void);
+[v _START_ADC `(v ~T0 @X0 0 ef ]
+"15225 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15225: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -771,6 +771,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_Value
 -> 0 `i
 ]
+"35 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
+[v _ADC_VALUE `i ~T0 @X0 1 e ]
+[i _ADC_VALUE
+-> 0 `i
+]
+"36
+[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
+[v _digital_value `uc ~T0 @X0 1 e ]
+[i _digital_value
+-> -> 0 `i `uc
+]
+"37
+[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 e ]
+[i _recived
+-> -> 0 `i `uc
+]
+"38
+[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 e ]
+[i _msg
+-> -> 0 `i `uc
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "11 main.c
 [; ;main.c: 11: void main(void) {
@@ -781,14 +805,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;main.c: 12:     SETUP();
 [e ( _SETUP ..  ]
-"14
-[; ;main.c: 14:     uint8_t recived = 0x00;
-[v _recived `uc ~T0 @X0 1 a ]
-[e = _recived -> -> 0 `i `uc ]
-"15
-[; ;main.c: 15:     uint8_t msg = 0x00;
-[v _msg `uc ~T0 @X0 1 a ]
-[e = _msg -> -> 0 `i `uc ]
 "16
 [; ;main.c: 16:     while(1)
 [e :U 853 ]
@@ -796,66 +812,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 17:     {
 {
 "18
-[; ;main.c: 18:         recived = SPI1_ExchangeByte(msg);
-[e = _recived ( _SPI1_ExchangeByte (1 _msg ]
-"20
-[; ;main.c: 20:         if(recived==0xFF){
+[; ;main.c: 18:         START_ADC();
+[e ( _START_ADC ..  ]
+"22
+[; ;main.c: 22:         if(recived==0xFF){
 [e $ ! == -> _recived `i -> 255 `i 855  ]
 {
-"21
-[; ;main.c: 21:             msg = 0x09;
-[e = _msg -> -> 9 `i `uc ]
-"22
-[; ;main.c: 22:             LATB = 0x03;
-[e = _LATB -> -> 3 `i `uc ]
 "23
-[; ;main.c: 23:         }
+[; ;main.c: 23:             msg = 0x09;
+[e = _msg -> -> 9 `i `uc ]
+"25
+[; ;main.c: 25:         }
 }
 [e $U 856  ]
-"24
-[; ;main.c: 24:         else if(recived==0x01){
+"26
+[; ;main.c: 26:         else if(recived==0x01){
 [e :U 855 ]
 [e $ ! == -> _recived `i -> 1 `i 857  ]
 {
-"25
-[; ;main.c: 25:             msg = 0x0A;
-[e = _msg -> -> 10 `i `uc ]
-"26
-[; ;main.c: 26:         }
+"27
+[; ;main.c: 27:             msg = ADC_VALUE;
+[e = _msg -> _ADC_VALUE `uc ]
+"28
+[; ;main.c: 28:         }
 }
 [e $U 858  ]
-"27
-[; ;main.c: 27:         else if(recived==0x03){
+"29
+[; ;main.c: 29:         else if(recived==0x03){
 [e :U 857 ]
 [e $ ! == -> _recived `i -> 3 `i 859  ]
 {
-"28
-[; ;main.c: 28:             msg = 0x0B;
-[e = _msg -> -> 11 `i `uc ]
-"29
-[; ;main.c: 29:         }
+"30
+[; ;main.c: 30:             msg = digital_value;
+[e = _msg -> _digital_value `uc ]
+"31
+[; ;main.c: 31:         }
 }
 [e $U 860  ]
-"30
-[; ;main.c: 30:         else{
+"32
+[; ;main.c: 32:         else{
 [e :U 859 ]
 {
-"31
-[; ;main.c: 31:             msg = 0x00;
+"33
+[; ;main.c: 33:             msg = 0x00;
 [e = _msg -> -> 0 `i `uc ]
-"32
-[; ;main.c: 32:         }
+"34
+[; ;main.c: 34:         }
 }
 [e :U 860 ]
 [e :U 858 ]
 [e :U 856 ]
-"33
-[; ;main.c: 33:     }
+"35
+[; ;main.c: 35:         SSP1BUF = msg;
+[e = _SSP1BUF _msg ]
+"36
+[; ;main.c: 36:     }
 }
 [e :U 852 ]
 [e $U 853  ]
 [e :U 854 ]
-"34
-[; ;main.c: 34: }
+"37
+[; ;main.c: 37: }
 [e :UE 851 ]
 }
