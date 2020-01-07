@@ -31,11 +31,12 @@
 #ifndef XC_SPI_H
 #define	XC_SPI_H
 
-#include "configurations.h"
 #include "PIC_SETUP.h"
-void setup();
+#include <stdint.h>
+
+void SETUP();
 void SPI1_Initialize(void);
-unsigned char SPI1_ExchangeByte(unsigned char data);
+unsigned char SPI1_ExchangeByte(uint8_t data);
 
 
 

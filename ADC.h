@@ -28,19 +28,15 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef XC_PIC_SETUP_H
-#define	XC_PIC_SETUP_H
+#ifndef XC_ADC_H
+#define	XC_ADC_H
+#include <pic18f43k22.h>
+#include "PIC_SETUP.h" // include processor files - each processor file is guarded.  
+int ADC_Value = 0;
 
-#include <xc.h> // include processor files - each processor file is guarded. 
-#include <stdint.h>
-#include "CONFIGURATIONS.h"
-#include "ADC.h"
-#include "Interrupt_Service_Routine.h"
-#include "SPI.h"
-void SETUP(void);
-void set_oscilators(void);
-void init_pins(void);
-void init_interrupts(void);
+void INIT_ADC(void);
+void START_ADC(void);
+void WAIT_ADC(void);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

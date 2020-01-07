@@ -1,7 +1,7 @@
-build/default/production/PIC_SETUP.p1:  \
-PIC_SETUP.c  \
+build/default/production/ADC.p1:  \
+ADC.c  \
+ADC.h  \
 PIC_SETUP.h  \
 CONFIGURATIONS.h  \
-ADC.h  \
 Interrupt_Service_Routine.h  \
 SPI.h 

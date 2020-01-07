@@ -28,19 +28,11 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef XC_PIC_SETUP_H
-#define	XC_PIC_SETUP_H
-
-#include <xc.h> // include processor files - each processor file is guarded. 
-#include <stdint.h>
-#include "CONFIGURATIONS.h"
+#ifndef XC_PIC_ISR_H
+#define	XC_PIC_ISR_H
+#include <pic18f43k22.h>
 #include "ADC.h"
-#include "Interrupt_Service_Routine.h"
-#include "SPI.h"
-void SETUP(void);
-void set_oscilators(void);
-void init_pins(void);
-void init_interrupts(void);
+void __interrupt() ISR(void);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

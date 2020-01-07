@@ -1,5 +1,7 @@
 build/default/production/main.p1:  \
 main.c  \
-SPI.h  \
-configurations.h  \
-PIC_SETUP.h 
+PIC_SETUP.h  \
+CONFIGURATIONS.h  \
+ADC.h  \
+Interrupt_Service_Routine.h  \
+SPI.h 

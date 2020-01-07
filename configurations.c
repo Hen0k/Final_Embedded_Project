@@ -1,4 +1,4 @@
-#include "configurations.h"
+#include "CONFIGURATIONS.h"
 
 
 // CONFIG1H

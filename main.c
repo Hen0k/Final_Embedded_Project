@@ -6,15 +6,29 @@
  */
 
 
-#include "SPI.h"
+#include "PIC_SETUP.h"
 
 void main(void) {
-    setup();
+    SETUP();
     
-    unsigned char data = 0x00;
+    uint8_t recived = 0x00;
+    uint8_t msg = 0x00;
     while(1)
     {
-        data = SPI1_ExchangeByte(0x09);
-        LATB = data;
+        recived = SPI1_ExchangeByte(msg);
+//        LATB = recived;
+        if(recived==0xFF){
+            msg = 0x09;
+            LATB = 0x03;
+        }
+        else if(recived==0x01){
+            msg = 0x0A;
+        }
+        else if(recived==0x03){
+            msg = 0x0B;
+        }
+        else{
+            msg = 0x00;
+        }
     }
 }

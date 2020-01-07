@@ -7,7 +7,7 @@
 # 1 "/opt/microchip/xc8/v2.05/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "configurations.c" 2
-# 1 "./configurations.h" 1
+# 1 "./CONFIGURATIONS.h" 1
 # 2 "configurations.c" 2
 
 

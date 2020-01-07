@@ -7,7 +7,6 @@
 # 1 "/opt/microchip/xc8/v2.05/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "PIC_SETUP.c" 2
-
 # 1 "/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h" 1 3
 # 44 "/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h" 3
 # 1 "/opt/microchip/xc8/v2.05/pic/include/__at.h" 1 3
@@ -9364,7 +9363,7 @@ extern volatile __bit nW2 __attribute__((address(0x7B6A)));
 
 
 extern volatile __bit nWRITE2 __attribute__((address(0x7B6A)));
-# 3 "PIC_SETUP.c" 2
+# 2 "PIC_SETUP.c" 2
 # 1 "./PIC_SETUP.h" 1
 # 34 "./PIC_SETUP.h"
 # 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
@@ -9528,32 +9527,151 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
 # 35 "./PIC_SETUP.h" 2
-# 1 "./configurations.h" 1
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 1 3
+# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
+# 135 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 150 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef long intptr_t;
+# 166 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 181 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 196 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 217 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 237 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 23 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 155 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 156 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 2 3
 # 36 "./PIC_SETUP.h" 2
-void set_oscilators();
-void init_pins();
-void init_interrupts();
-# 4 "PIC_SETUP.c" 2
+# 1 "./CONFIGURATIONS.h" 1
+# 37 "./PIC_SETUP.h" 2
+# 1 "./ADC.h" 1
+# 34 "./ADC.h"
+# 1 "./PIC_SETUP.h" 1
+# 35 "./ADC.h" 2
+int ADC_Value = 0;
+
+void INIT_ADC(void);
+void START_ADC(void);
+void WAIT_ADC(void);
+# 38 "./PIC_SETUP.h" 2
+# 1 "./Interrupt_Service_Routine.h" 1
+# 35 "./Interrupt_Service_Routine.h"
+void __attribute__((picinterrupt(("")))) ISR(void);
+# 39 "./PIC_SETUP.h" 2
+# 1 "./SPI.h" 1
+# 34 "./SPI.h"
+# 1 "./PIC_SETUP.h" 1
+# 35 "./SPI.h" 2
+
+
+void SETUP();
+void SPI1_Initialize(void);
+unsigned char SPI1_ExchangeByte(uint8_t data);
+# 40 "./PIC_SETUP.h" 2
+void SETUP(void);
+void set_oscilators(void);
+void init_pins(void);
+void init_interrupts(void);
+# 3 "PIC_SETUP.c" 2
+
+
+void SETUP()
+{
+    set_oscilators();
+    init_pins();
+
+    INIT_ADC();
+    SPI1_Initialize();
+}
+
 
 void set_oscilators()
 {
 
-    OSCCON = 0x62;
-    OSCCONbits.IDLEN = 0;
+
+
     OSCCONbits.IRCF = 6;
-    OSCCONbits.OSTS = 0;
-    OSCCONbits.HFIOFS = 0;
+
+
     OSCCONbits.SCS = 2;
 
 
 
-    OSCCON2bits.PLLRDY = 0;
-    OSCCON2bits.SOSCRUN = 0;
-    OSCCON2bits.MFIOSEL = 0;
-    OSCCON2bits.SOSCGO = 0;
+
+
+
+
     OSCCON2bits.PRISD = 1;
-    OSCCON2bits.MFIOFS = 0;
-    OSCCON2bits.LFIOFS = 0;
+
+
 
 
     OSCTUNE = 0x00;
@@ -9571,22 +9689,45 @@ void init_pins()
     ANSELC = 0x00;
 
 
-    TRISB = 0x00;
-    ANSELB = 0x00;
+    TRISB5 = 1;
+    ANSELBbits.ANSB5 = 0;
+
+
+    TRISA0 = 1;
+    ANSELAbits.ANSA0 = 1;;
+
+
+    TRISD5 = 0;
+    ANSELDbits.ANSD5 = 0;
+
+
+    TRISC0 = 0;
+    TRISC1 = 0;
 }
 
 void init_interrupts()
 {
+
     PIR1bits.SSP1IF = 0;
     PIE1bits.SSP1IE = 1;
-    IPEN = 1;
-    GIE = 1;
-}
 
-void __attribute__((picinterrupt(("")))) SPI_ISR()
-{
-    if(PIR1bits.SSP1IF)
-    {
-        PIR1bits.SSP1IF = 0;
-    }
+
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
+
+
+    INTCONbits.RBIF = 0;
+    INTCONbits.RBIE = 1;
+
+
+    IOCBbits.IOCB5 = 1;
+
+
+    IPEN = 0;
+
+
+    INTCONbits.PEIE =1;
+
+
+    INTCONbits.GIE = 1;
 }

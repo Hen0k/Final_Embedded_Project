@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"36 ./SPI.h
-[; ;./SPI.h: 36: void setup();
-[v _setup `(v ~T0 @X0 0 e? ]
-"38
-[; ;./SPI.h: 38: unsigned char SPI1_ExchangeByte(unsigned char data);
+"40 ./PIC_SETUP.h
+[; ;./PIC_SETUP.h: 40: void SETUP(void);
+[v _SETUP `(v ~T0 @X0 0 ef ]
+"39 ./SPI.h
+[; ;./SPI.h: 39: unsigned char SPI1_ExchangeByte(uint8_t data);
 [v _SPI1_ExchangeByte `(uc ~T0 @X0 0 ef1`uc ]
 "7672 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7672: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
@@ -765,6 +765,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"35 ./ADC.h
+[; ;./ADC.h: 35: int ADC_Value = 0;
+[v _ADC_Value `i ~T0 @X0 1 e ]
+[i _ADC_Value
+-> 0 `i
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "11 main.c
 [; ;main.c: 11: void main(void) {
@@ -773,31 +779,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "12
-[; ;main.c: 12:     setup();
-[e ( _setup ..  ]
+[; ;main.c: 12:     SETUP();
+[e ( _SETUP ..  ]
 "14
-[; ;main.c: 14:     unsigned char data = 0x00;
-[v _data `uc ~T0 @X0 1 a ]
-[e = _data -> -> 0 `i `uc ]
+[; ;main.c: 14:     uint8_t recived = 0x00;
+[v _recived `uc ~T0 @X0 1 a ]
+[e = _recived -> -> 0 `i `uc ]
 "15
-[; ;main.c: 15:     while(1)
-[e :U 853 ]
+[; ;main.c: 15:     uint8_t msg = 0x00;
+[v _msg `uc ~T0 @X0 1 a ]
+[e = _msg -> -> 0 `i `uc ]
 "16
-[; ;main.c: 16:     {
-{
+[; ;main.c: 16:     while(1)
+[e :U 853 ]
 "17
-[; ;main.c: 17:         data = SPI1_ExchangeByte(0x09);
-[e = _data ( _SPI1_ExchangeByte (1 -> -> 9 `i `uc ]
+[; ;main.c: 17:     {
+{
 "18
-[; ;main.c: 18:         LATB = data;
-[e = _LATB _data ]
-"19
-[; ;main.c: 19:     }
+[; ;main.c: 18:         recived = SPI1_ExchangeByte(msg);
+[e = _recived ( _SPI1_ExchangeByte (1 _msg ]
+"20
+[; ;main.c: 20:         if(recived==0xFF){
+[e $ ! == -> _recived `i -> 255 `i 855  ]
+{
+"21
+[; ;main.c: 21:             msg = 0x09;
+[e = _msg -> -> 9 `i `uc ]
+"22
+[; ;main.c: 22:             LATB = 0x03;
+[e = _LATB -> -> 3 `i `uc ]
+"23
+[; ;main.c: 23:         }
+}
+[e $U 856  ]
+"24
+[; ;main.c: 24:         else if(recived==0x01){
+[e :U 855 ]
+[e $ ! == -> _recived `i -> 1 `i 857  ]
+{
+"25
+[; ;main.c: 25:             msg = 0x0A;
+[e = _msg -> -> 10 `i `uc ]
+"26
+[; ;main.c: 26:         }
+}
+[e $U 858  ]
+"27
+[; ;main.c: 27:         else if(recived==0x03){
+[e :U 857 ]
+[e $ ! == -> _recived `i -> 3 `i 859  ]
+{
+"28
+[; ;main.c: 28:             msg = 0x0B;
+[e = _msg -> -> 11 `i `uc ]
+"29
+[; ;main.c: 29:         }
+}
+[e $U 860  ]
+"30
+[; ;main.c: 30:         else{
+[e :U 859 ]
+{
+"31
+[; ;main.c: 31:             msg = 0x00;
+[e = _msg -> -> 0 `i `uc ]
+"32
+[; ;main.c: 32:         }
+}
+[e :U 860 ]
+[e :U 858 ]
+[e :U 856 ]
+"33
+[; ;main.c: 33:     }
 }
 [e :U 852 ]
 [e $U 853  ]
 [e :U 854 ]
-"20
-[; ;main.c: 20: }
+"34
+[; ;main.c: 34: }
 [e :UE 851 ]
 }

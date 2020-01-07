@@ -1,121 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"41 ./PIC_SETUP.h
-[; ;./PIC_SETUP.h: 41: void set_oscilators(void);
-[v _set_oscilators `(v ~T0 @X0 0 ef ]
-"42
-[; ;./PIC_SETUP.h: 42: void init_pins(void);
-[v _init_pins `(v ~T0 @X0 0 ef ]
-"37 ./ADC.h
-[; ;./ADC.h: 37: void INIT_ADC(void);
-[v _INIT_ADC `(v ~T0 @X0 0 ef ]
-"38 ./SPI.h
-[; ;./SPI.h: 38: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"16018 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16018:     struct {
-[s S758 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S758 . SCS HFIOFS OSTS IRCF IDLEN ]
-"16025
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16025:     struct {
-[s S759 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S759 . SCS0 SCS1 IOFS . IRCF0 IRCF1 IRCF2 ]
-"16017
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16017: typedef union {
-[u S757 `S758 1 `S759 1 ]
-[n S757 . . . ]
-"16035
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16035: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-[v _OSCCONbits `VS757 ~T0 @X0 0 e@4051 ]
-"15961
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15961:     struct {
-[s S756 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S756 . LFIOFS MFIOFS PRISD SOSCGO MFIOSEL . SOSCRUN PLLRDY ]
-"15960
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15960: typedef union {
-[u S755 `S756 1 ]
-[n S755 . . ]
-"15972
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15972: extern volatile OSCCON2bits_t OSCCON2bits __attribute__((address(0xFD2)));
-[v _OSCCON2bits `VS755 ~T0 @X0 0 e@4050 ]
-"9064
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9064: extern volatile unsigned char OSCTUNE __attribute__((address(0xF9B)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
-"7560
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7560: extern volatile unsigned char LATA __attribute__((address(0xF89)));
-[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"7672
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7672: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"7784
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7784: extern volatile unsigned char LATC __attribute__((address(0xF8B)));
-[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
-"7896
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 7896: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"20464
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20464: extern volatile __bit TRISC3 __attribute__((address(0x7CA3)));
-[v _TRISC3 `Vb ~T0 @X0 0 e@31907 ]
-"20467
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20467: extern volatile __bit TRISC4 __attribute__((address(0x7CA4)));
-[v _TRISC4 `Vb ~T0 @X0 0 e@31908 ]
-"20470
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20470: extern volatile __bit TRISC5 __attribute__((address(0x7CA5)));
-[v _TRISC5 `Vb ~T0 @X0 0 e@31909 ]
-"20422
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20422: extern volatile __bit TRISA5 __attribute__((address(0x7C95)));
-[v _TRISA5 `Vb ~T0 @X0 0 e@31893 ]
-"58
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 58:     struct {
-[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2 . ANSA0 ANSA1 ANSA2 ANSA3 . ANSA5 ]
-"57
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 57: typedef union {
-[u S1 `S2 1 ]
-[n S1 . . ]
-"67
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 67: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0xF38)));
-[v _ANSELAbits `VS1 ~T0 @X0 0 e@3896 ]
-"147
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 147: extern volatile unsigned char ANSELC __attribute__((address(0xF3A)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@3898 ]
-"20446
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20446: extern volatile __bit TRISB5 __attribute__((address(0x7C9D)));
-[v _TRISB5 `Vb ~T0 @X0 0 e@31901 ]
-"103
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 103:     struct {
-[s S4 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S4 . ANSB0 ANSB1 ANSB2 ANSB3 ANSB4 ANSB5 ]
-"102
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 102: typedef union {
-[u S3 `S4 1 ]
-[n S3 . . ]
-"112
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 112: extern volatile ANSELBbits_t ANSELBbits __attribute__((address(0xF39)));
-[v _ANSELBbits `VS3 ~T0 @X0 0 e@3897 ]
-"20407
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20407: extern volatile __bit TRISA0 __attribute__((address(0x7C90)));
-[v _TRISA0 `Vb ~T0 @X0 0 e@31888 ]
-"20494
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20494: extern volatile __bit TRISD5 __attribute__((address(0x7CAD)));
-[v _TRISD5 `Vb ~T0 @X0 0 e@31917 ]
-"204
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 204:     struct {
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . ANSD0 ANSD1 ANSD2 ANSD3 ANSD4 ANSD5 ANSD6 ANSD7 ]
-"203
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 203: typedef union {
-[u S7 `S8 1 ]
-[n S7 . . ]
-"215
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 215: extern volatile ANSELDbits_t ANSELDbits __attribute__((address(0xF3B)));
-[v _ANSELDbits `VS7 ~T0 @X0 0 e@3899 ]
-"20455
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20455: extern volatile __bit TRISC0 __attribute__((address(0x7CA0)));
-[v _TRISC0 `Vb ~T0 @X0 0 e@31904 ]
-"20458
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 20458: extern volatile __bit TRISC1 __attribute__((address(0x7CA1)));
-[v _TRISC1 `Vb ~T0 @X0 0 e@31905 ]
-"9497
+[t ~ __interrupt . k ]
+[t T2 __interrupt ]
+"9497 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9497:     struct {
 [s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S436 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
@@ -130,21 +16,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9513
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
 [v _PIR1bits `VS435 ~T0 @X0 0 e@3998 ]
-"9420
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9420:     struct {
-[s S433 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S433 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE ]
-"9429
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9429:     struct {
-[s S434 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S434 . . SSPIE TXIE RCIE ]
-"9419
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9419: typedef union {
-[u S432 `S433 1 `S434 1 ]
-[n S432 . . . ]
-"9436
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9436: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
-[v _PIE1bits `VS432 ~T0 @X0 0 e@3997 ]
+"18748
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18748: extern volatile __bit LATC0 __attribute__((address(0x7C58)));
+[v _LATC0 `Vb ~T0 @X0 0 e@31832 ]
+"38 ./ADC.h
+[; ;./ADC.h: 38: void START_ADC(void);
+[v _START_ADC `(v ~T0 @X0 0 ef ]
+"39
+[; ;./ADC.h: 39: void WAIT_ADC(void);
+[v _WAIT_ADC `(v ~T0 @X0 0 ef ]
+"13729 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13729: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
 "16898
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16898:     struct {
 [s S818 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -164,20 +47,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16924
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 16924: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS817 ~T0 @X0 0 e@4082 ]
-"2787
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 2787:     struct {
-[s S134 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S134 . . IOCB4 IOCB5 IOCB6 IOCB7 ]
-"2786
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 2786: typedef union {
-[u S133 `S134 1 ]
-[n S133 . . ]
-"2795
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 2795: extern volatile IOCBbits_t IOCBbits __attribute__((address(0xF62)));
-[v _IOCBbits `VS133 ~T0 @X0 0 e@3938 ]
-"18622
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18622: extern volatile __bit IPEN __attribute__((address(0x7E87)));
-[v _IPEN `Vb ~T0 @X0 0 e@32391 ]
+"18751
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 18751: extern volatile __bit LATC1 __attribute__((address(0x7C59)));
+[v _LATC1 `Vb ~T0 @X0 0 e@31833 ]
+"6571
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6571:     struct {
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6581
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6581:     struct {
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6591
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6591:     struct {
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6601
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6601:     struct {
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6609
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6609:     struct {
+[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6617
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6617:     struct {
+[s S346 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . CTED1 CTED2 . T3CKI ]
+"6624
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6624:     struct {
+[s S347 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . . P2A . P3A ]
+"6630
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6630:     struct {
+[s S348 :3 `uc 1 :1 `uc 1 ]
+[n S348 . . CCP2_PA2 ]
+"6570
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6570: typedef union {
+[u S340 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 ]
+[n S340 . . . . . . . . . ]
+"6635
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 6635: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
+[v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -940,150 +851,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_Value
 -> 0 `i
 ]
-"5 PIC_SETUP.c
-[; ;PIC_SETUP.c: 5: void SETUP()
-[v _SETUP `(v ~T0 @X0 1 ef ]
+"3 Interrupt_Service_Routine.c
+[; ;Interrupt_Service_Routine.c: 3: int ADC_VALUE = 0;
+[v _ADC_VALUE `i ~T0 @X0 1 e ]
+[i _ADC_VALUE
+-> 0 `i
+]
+"4
+[; ;Interrupt_Service_Routine.c: 4: char digital_value = 0;
+[v _digital_value `uc ~T0 @X0 1 e ]
+[i _digital_value
+-> -> 0 `i `uc
+]
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"5
+[; ;Interrupt_Service_Routine.c: 5: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T2 @X0 1 ef ]
 "6
-[; ;PIC_SETUP.c: 6: {
+[; ;Interrupt_Service_Routine.c: 6: {
 {
-[e :U _SETUP ]
+[e :U _ISR ]
 [f ]
-"7
-[; ;PIC_SETUP.c: 7:     set_oscilators();
-[e ( _set_oscilators ..  ]
-"8
-[; ;PIC_SETUP.c: 8:     init_pins();
-[e ( _init_pins ..  ]
-"10
-[; ;PIC_SETUP.c: 10:     INIT_ADC();
-[e ( _INIT_ADC ..  ]
-"11
-[; ;PIC_SETUP.c: 11:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"12
-[; ;PIC_SETUP.c: 12: }
-[e :UE 851 ]
-}
-"15
-[; ;PIC_SETUP.c: 15: void set_oscilators()
-[v _set_oscilators `(v ~T0 @X0 1 ef ]
 "16
-[; ;PIC_SETUP.c: 16: {
+[; ;Interrupt_Service_Routine.c: 16:     if(PIR1bits.ADIF == 1)
+[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 852  ]
+"17
+[; ;Interrupt_Service_Routine.c: 17:     {
 {
-[e :U _set_oscilators ]
-[f ]
+"18
+[; ;Interrupt_Service_Routine.c: 18:         LATC0 = 1;
+[e = _LATC0 -> -> 1 `i `b ]
+"19
+[; ;Interrupt_Service_Routine.c: 19:         START_ADC();
+[e ( _START_ADC ..  ]
 "20
-[; ;PIC_SETUP.c: 20:     OSCCONbits.IRCF = 6;
-[e = . . _OSCCONbits 0 3 -> -> 6 `i `uc ]
-"23
-[; ;PIC_SETUP.c: 23:     OSCCONbits.SCS = 2;
-[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
-"31
-[; ;PIC_SETUP.c: 31:     OSCCON2bits.PRISD = 1;
-[e = . . _OSCCON2bits 0 2 -> -> 1 `i `uc ]
-"36
-[; ;PIC_SETUP.c: 36:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"37
-[; ;PIC_SETUP.c: 37: }
-[e :UE 852 ]
-}
-"39
-[; ;PIC_SETUP.c: 39: void init_pins()
-[v _init_pins `(v ~T0 @X0 1 ef ]
-"40
-[; ;PIC_SETUP.c: 40: {
-{
-[e :U _init_pins ]
-[f ]
-"41
-[; ;PIC_SETUP.c: 41:     LATA, LATB, LATC, LATD = 0x00;
-[e ; ; ; _LATA _LATB _LATC = _LATD -> -> 0 `i `uc ]
-"43
-[; ;PIC_SETUP.c: 43:     TRISC3 = 1;
-[e = _TRISC3 -> -> 1 `i `b ]
-"44
-[; ;PIC_SETUP.c: 44:     TRISC4 = 1;
-[e = _TRISC4 -> -> 1 `i `b ]
-"45
-[; ;PIC_SETUP.c: 45:     TRISC5 = 0;
-[e = _TRISC5 -> -> 0 `i `b ]
-"46
-[; ;PIC_SETUP.c: 46:     TRISA5 = 1;
-[e = _TRISA5 -> -> 1 `i `b ]
-"47
-[; ;PIC_SETUP.c: 47:     ANSELAbits.ANSA5 = 0;
-[e = . . _ANSELAbits 0 5 -> -> 0 `i `uc ]
-"48
-[; ;PIC_SETUP.c: 48:     ANSELC = 0x00;
-[e = _ANSELC -> -> 0 `i `uc ]
-"51
-[; ;PIC_SETUP.c: 51:     TRISB5 = 1;
-[e = _TRISB5 -> -> 1 `i `b ]
-"52
-[; ;PIC_SETUP.c: 52:     ANSELBbits.ANSB5 = 0;
-[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
-"55
-[; ;PIC_SETUP.c: 55:     TRISA0 = 1;
-[e = _TRISA0 -> -> 1 `i `b ]
-"56
-[; ;PIC_SETUP.c: 56:     ANSELAbits.ANSA0 = 1;;
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-"59
-[; ;PIC_SETUP.c: 59:     TRISD5 = 0;
-[e = _TRISD5 -> -> 0 `i `b ]
-"60
-[; ;PIC_SETUP.c: 60:     ANSELDbits.ANSD5 = 0;
-[e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
-"63
-[; ;PIC_SETUP.c: 63:     TRISC0 = 0;
-[e = _TRISC0 -> -> 0 `i `b ]
-"64
-[; ;PIC_SETUP.c: 64:     TRISC1 = 0;
-[e = _TRISC1 -> -> 0 `i `b ]
-"65
-[; ;PIC_SETUP.c: 65: }
-[e :UE 853 ]
-}
-"67
-[; ;PIC_SETUP.c: 67: void init_interrupts()
-[v _init_interrupts `(v ~T0 @X0 1 ef ]
-"68
-[; ;PIC_SETUP.c: 68: {
-{
-[e :U _init_interrupts ]
-[f ]
-"70
-[; ;PIC_SETUP.c: 70:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"71
-[; ;PIC_SETUP.c: 71:     PIE1bits.SSP1IE = 1;
-[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
-"74
-[; ;PIC_SETUP.c: 74:     PIR1bits.ADIF = 0;
+[; ;Interrupt_Service_Routine.c: 20:         WAIT_ADC();
+[e ( _WAIT_ADC ..  ]
+"21
+[; ;Interrupt_Service_Routine.c: 21:         ADC_VALUE = ADRESH;
+[e = _ADC_VALUE -> _ADRESH `i ]
+"22
+[; ;Interrupt_Service_Routine.c: 22:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"75
-[; ;PIC_SETUP.c: 75:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"78
-[; ;PIC_SETUP.c: 78:     INTCONbits.RBIF = 0;
+"23
+[; ;Interrupt_Service_Routine.c: 23:     }
+}
+[e :U 852 ]
+"27
+[; ;Interrupt_Service_Routine.c: 27:     if(INTCONbits.RBIF == 1)
+[e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 853  ]
+"28
+[; ;Interrupt_Service_Routine.c: 28:     {
+{
+"29
+[; ;Interrupt_Service_Routine.c: 29:         LATC1 = !LATC1;
+[e = _LATC1 ! _LATC1 ]
+"30
+[; ;Interrupt_Service_Routine.c: 30:         digital_value = PORTBbits.RB5;
+[e = _digital_value -> . . _PORTBbits 0 5 `uc ]
+"31
+[; ;Interrupt_Service_Routine.c: 31:         INTCONbits.RBIF = 0;
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"79
-[; ;PIC_SETUP.c: 79:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"82
-[; ;PIC_SETUP.c: 82:     IOCBbits.IOCB5 = 1;
-[e = . . _IOCBbits 0 2 -> -> 1 `i `uc ]
-"85
-[; ;PIC_SETUP.c: 85:     IPEN = 0;
-[e = _IPEN -> -> 0 `i `b ]
-"88
-[; ;PIC_SETUP.c: 88:     INTCONbits.PEIE =1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"91
-[; ;PIC_SETUP.c: 91:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"92
-[; ;PIC_SETUP.c: 92: }
-[e :UE 854 ]
+"32
+[; ;Interrupt_Service_Routine.c: 32:     }
+}
+[e :U 853 ]
+"33
+[; ;Interrupt_Service_Routine.c: 33: }
+[e :UE 851 ]
 }
