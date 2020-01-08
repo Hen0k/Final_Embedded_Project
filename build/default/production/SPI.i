@@ -9368,7 +9368,7 @@ extern volatile __bit nWRITE2 __attribute__((address(0x7B6A)));
 # 1 "./SPI.h" 1
 # 34 "./SPI.h"
 # 1 "./PIC_SETUP.h" 1
-# 34 "./PIC_SETUP.h"
+# 13 "./PIC_SETUP.h"
 # 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
 # 18 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9529,7 +9529,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
-# 35 "./PIC_SETUP.h" 2
+# 14 "./PIC_SETUP.h" 2
 # 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 1 3
 # 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 3
 # 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
@@ -9612,21 +9612,20 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 156 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 2 3
-# 36 "./PIC_SETUP.h" 2
+# 15 "./PIC_SETUP.h" 2
+
 # 1 "./CONFIGURATIONS.h" 1
-# 37 "./PIC_SETUP.h" 2
+# 17 "./PIC_SETUP.h" 2
 # 1 "./ADC.h" 1
-# 34 "./ADC.h"
-# 1 "./PIC_SETUP.h" 1
-# 35 "./ADC.h" 2
+# 15 "./ADC.h"
 int ADC_Value = 0;
 
 void INIT_ADC(void);
 void START_ADC(void);
 void WAIT_ADC(void);
-# 38 "./PIC_SETUP.h" 2
+# 18 "./PIC_SETUP.h" 2
 # 1 "./Interrupt_Service_Routine.h" 1
-# 35 "./Interrupt_Service_Routine.h"
+# 38 "./Interrupt_Service_Routine.h"
 int ADC_VALUE = 0;
 char digital_value = 0;
 uint8_t recived = 0x00;
@@ -9634,9 +9633,15 @@ uint8_t msg = 0x00;
 
 
 void __attribute__((picinterrupt(("")))) ISR(void);
-# 39 "./PIC_SETUP.h" 2
+# 19 "./PIC_SETUP.h" 2
 # 1 "./SPI.h" 1
-# 40 "./PIC_SETUP.h" 2
+# 20 "./PIC_SETUP.h" 2
+# 1 "./ACTUATOR.h" 1
+# 15 "./ACTUATOR.h"
+void Turn_ON(void);
+void Turn_OFF(void);
+# 21 "./PIC_SETUP.h" 2
+
 void SETUP(void);
 void set_oscilators(void);
 void init_pins(void);
@@ -9660,13 +9665,4 @@ void SPI1_Initialize(void)
 
     SSP1ADD = 0x00;
     SSP1CON2 = 0x00;
-}
-
-unsigned char SPI1_ExchangeByte(unsigned char data)
-{
-    SSP1BUF = data;
-    while(!PIR1bits.SSP1IF);
-    PIR1bits.SSP1IF = 0;
-    if(SSP1CON1bits.WCOL) SSP1CON1bits.WCOL = 0;
-    return SSP1BUF;
 }

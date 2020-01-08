@@ -30,8 +30,11 @@
 // more than once.  
 #ifndef XC_PIC_ISR_H
 #define	XC_PIC_ISR_H
+
 #include <pic18f43k22.h>
+#include <stdint.h>
 #include "ADC.h"
+
 int ADC_VALUE = 0;
 char digital_value = 0;
 uint8_t recived = 0x00;

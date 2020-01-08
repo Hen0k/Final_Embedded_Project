@@ -4,12 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>PIC_SETUP.h</itemPath>
-      <itemPath>SPI.h</itemPath>
-      <itemPath>ADC.h</itemPath>
-      <itemPath>Interrupt_Service_Routine.h</itemPath>
-      <itemPath>CONFIGURATIONS.h</itemPath>
-      <itemPath>ACTUATOR.h</itemPath>
+      <logicalFolder name="f1" displayName="helper_headers" projectFiles="true">
+        <itemPath>SPI.h</itemPath>
+        <itemPath>PIC_SETUP.h</itemPath>
+        <itemPath>Interrupt_Service_Routine.h</itemPath>
+        <itemPath>CONFIGURATIONS.h</itemPath>
+        <itemPath>ADC.h</itemPath>
+        <itemPath>ACTUATOR.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,12 +20,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>configurations.c</itemPath>
-      <itemPath>PIC_SETUP.c</itemPath>
+      <logicalFolder name="f1" displayName="helpers_source" projectFiles="true">
+        <itemPath>ADC.c</itemPath>
+        <itemPath>configurations.c</itemPath>
+        <itemPath>Interrupt_Service_Routine.c</itemPath>
+        <itemPath>PIC_SETUP.c</itemPath>
+        <itemPath>SPI.c</itemPath>
+        <itemPath>ACTUATOR.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>SPI.c</itemPath>
-      <itemPath>ADC.c</itemPath>
-      <itemPath>Interrupt_Service_Routine.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

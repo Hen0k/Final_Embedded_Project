@@ -26,8 +26,16 @@ void main(void) {
         else if(recived==0x01){
             msg = ADC_VALUE;
         }
-        else if(recived==0x03){
+        else if(recived==0x02){
             msg = digital_value;
+        }
+        else if(recived==0x03){
+            Turn_OFF();
+            msg = 0x00;
+        }
+        else if(recived==0x04){
+            Turn_ON();
+            msg = 0x00;
         }
         else{
             msg = 0x00;

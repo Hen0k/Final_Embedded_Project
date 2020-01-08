@@ -7,43 +7,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
 "13583
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13583:     struct {
-[s S640 :1 `uc 1 :1 `uc 1 ]
-[n S640 . . GO_NOT_DONE ]
+[s S645 :1 `uc 1 :1 `uc 1 ]
+[n S645 . . GO_NOT_DONE ]
 "13587
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13587:     struct {
-[s S641 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
-[n S641 . ADON GO_nDONE CHS ]
+[s S646 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S646 . ADON GO_nDONE CHS ]
 "13592
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13592:     struct {
-[s S642 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S642 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+[s S647 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S647 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
 "13601
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13601:     struct {
-[s S643 :1 `uc 1 :1 `uc 1 ]
-[n S643 . . DONE ]
+[s S648 :1 `uc 1 :1 `uc 1 ]
+[n S648 . . DONE ]
 "13605
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13605:     struct {
-[s S644 :1 `uc 1 :1 `uc 1 ]
-[n S644 . . NOT_DONE ]
+[s S649 :1 `uc 1 :1 `uc 1 ]
+[n S649 . . NOT_DONE ]
 "13609
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13609:     struct {
-[s S645 :1 `uc 1 :1 `uc 1 ]
-[n S645 . . nDONE ]
+[s S650 :1 `uc 1 :1 `uc 1 ]
+[n S650 . . nDONE ]
 "13613
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13613:     struct {
-[s S646 :1 `uc 1 :1 `uc 1 ]
-[n S646 . . GO_DONE ]
+[s S651 :1 `uc 1 :1 `uc 1 ]
+[n S651 . . GO_DONE ]
 "13617
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13617:     struct {
-[s S647 :1 `uc 1 :1 `uc 1 ]
-[n S647 . . GODONE ]
+[s S652 :1 `uc 1 :1 `uc 1 ]
+[n S652 . . GODONE ]
 "13582
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13582: typedef union {
-[u S639 `S640 1 `S641 1 `S642 1 `S643 1 `S644 1 `S645 1 `S646 1 `S647 1 ]
-[n S639 . . . . . . . . . ]
+[u S644 `S645 1 `S646 1 `S647 1 `S648 1 `S649 1 `S650 1 `S651 1 `S652 1 ]
+[n S644 . . . . . . . . . ]
 "13622
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13622: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
-[v _ADCON0bits `VS639 ~T0 @X0 0 e@4034 ]
+[v _ADCON0bits `VS644 ~T0 @X0 0 e@4034 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -800,32 +800,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"35 ./Interrupt_Service_Routine.h
-[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
-[v _ADC_VALUE `i ~T0 @X0 1 e ]
-[i _ADC_VALUE
--> 0 `i
-]
-"36
-[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
-[v _digital_value `uc ~T0 @X0 1 e ]
-[i _digital_value
--> -> 0 `i `uc
-]
-"37
-[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
-[v _recived `uc ~T0 @X0 1 e ]
-[i _recived
--> -> 0 `i `uc
-]
-"38
-[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
-[v _msg `uc ~T0 @X0 1 e ]
-[i _msg
--> -> 0 `i `uc
-]
-"35 ./ADC.h
-[; ;./ADC.h: 35: int ADC_Value = 0;
+"15 ./ADC.h
+[; ;./ADC.h: 15: int ADC_Value = 0;
 [v _ADC_Value `i ~T0 @X0 1 e ]
 [i _ADC_Value
 -> 0 `i

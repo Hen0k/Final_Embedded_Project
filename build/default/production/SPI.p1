@@ -11,43 +11,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13749
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 13749: extern volatile unsigned char SSP1CON2 __attribute__((address(0xFC5)));
 [v _SSP1CON2 `Vuc ~T0 @X0 0 e@4037 ]
-"15225
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 15225: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
-[v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
-"9497
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9497:     struct {
-[s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S436 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
-"9506
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9506:     struct {
-[s S437 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S437 . . SSPIF TXIF RCIF ]
-"9496
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9496: typedef union {
-[u S435 `S436 1 `S437 1 ]
-[n S435 . . . ]
-"9513
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS435 ~T0 @X0 0 e@3998 ]
-"14114
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14114:     struct {
-[s S663 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S663 . SSPM CKP SSPEN SSPOV WCOL ]
-"14121
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14121:     struct {
-[s S664 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S664 . SSPM0 SSPM1 SSPM2 SSPM3 ]
-"14127
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14127:     struct {
-[s S665 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S665 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
-"14113
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14113: typedef union {
-[u S662 `S663 1 `S664 1 `S665 1 ]
-[n S662 . . . . ]
-"14138
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 14138: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
-[v _SSP1CON1bits `VS662 ~T0 @X0 0 e@4038 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -804,32 +767,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"35 ./ADC.h
-[; ;./ADC.h: 35: int ADC_Value = 0;
+"15 ./ADC.h
+[; ;./ADC.h: 15: int ADC_Value = 0;
 [v _ADC_Value `i ~T0 @X0 1 e ]
 [i _ADC_Value
 -> 0 `i
 ]
-"35 ./Interrupt_Service_Routine.h
-[; ;./Interrupt_Service_Routine.h: 35: int ADC_VALUE = 0;
+"38 ./Interrupt_Service_Routine.h
+[; ;./Interrupt_Service_Routine.h: 38: int ADC_VALUE = 0;
 [v _ADC_VALUE `i ~T0 @X0 1 e ]
 [i _ADC_VALUE
 -> 0 `i
 ]
-"36
-[; ;./Interrupt_Service_Routine.h: 36: char digital_value = 0;
+"39
+[; ;./Interrupt_Service_Routine.h: 39: char digital_value = 0;
 [v _digital_value `uc ~T0 @X0 1 e ]
 [i _digital_value
 -> -> 0 `i `uc
 ]
-"37
-[; ;./Interrupt_Service_Routine.h: 37: uint8_t recived = 0x00;
+"40
+[; ;./Interrupt_Service_Routine.h: 40: uint8_t recived = 0x00;
 [v _recived `uc ~T0 @X0 1 e ]
 [i _recived
 -> -> 0 `i `uc
 ]
-"38
-[; ;./Interrupt_Service_Routine.h: 38: uint8_t msg = 0x00;
+"41
+[; ;./Interrupt_Service_Routine.h: 41: uint8_t msg = 0x00;
 [v _msg `uc ~T0 @X0 1 e ]
 [i _msg
 -> -> 0 `i `uc
@@ -857,43 +820,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;SPI.c: 16: }
 [e :UE 851 ]
-}
-"18
-[; ;SPI.c: 18: unsigned char SPI1_ExchangeByte(unsigned char data)
-[v _SPI1_ExchangeByte `(uc ~T0 @X0 1 ef1`uc ]
-"19
-[; ;SPI.c: 19: {
-{
-[e :U _SPI1_ExchangeByte ]
-"18
-[; ;SPI.c: 18: unsigned char SPI1_ExchangeByte(unsigned char data)
-[v _data `uc ~T0 @X0 1 r1 ]
-"19
-[; ;SPI.c: 19: {
-[f ]
-"20
-[; ;SPI.c: 20:     SSP1BUF = data;
-[e = _SSP1BUF _data ]
-"21
-[; ;SPI.c: 21:     while(!PIR1bits.SSP1IF);
-[e $U 853  ]
-[e :U 854 ]
-[e :U 853 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 854  ]
-[e :U 855 ]
-"22
-[; ;SPI.c: 22:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"23
-[; ;SPI.c: 23:     if(SSP1CON1bits.WCOL) SSP1CON1bits.WCOL = 0;
-[e $ ! != -> . . _SSP1CON1bits 0 4 `i -> 0 `i 856  ]
-[e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
-[e :U 856 ]
-"24
-[; ;SPI.c: 24:     return SSP1BUF;
-[e ) _SSP1BUF ]
-[e $UE 852  ]
-"25
-[; ;SPI.c: 25: }
-[e :UE 852 ]
 }

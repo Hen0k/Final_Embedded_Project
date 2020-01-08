@@ -15,12 +15,4 @@ void SPI1_Initialize(void)
     SSP1CON2 = 0x00;
 }
 
-unsigned char SPI1_ExchangeByte(unsigned char data)
-{
-    SSP1BUF = data;
-    while(!PIR1bits.SSP1IF);
-    PIR1bits.SSP1IF = 0;
-    if(SSP1CON1bits.WCOL) SSP1CON1bits.WCOL = 0;
-    return SSP1BUF;
-}
 

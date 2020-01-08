@@ -8,7 +8,132 @@
 # 2 "<built-in>" 2
 # 1 "ADC.c" 2
 # 1 "./ADC.h" 1
-# 33 "./ADC.h"
+# 13 "./ADC.h"
+# 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
+# 18 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 1 3
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 1 3
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/musl_xc8.h" 1 3
+# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
+
+
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/features.h" 1 3
+# 11 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
+# 21 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
+# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef long int wchar_t;
+# 127 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+# 176 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 212 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
+
+int atoi (const char *);
+long atol (const char *);
+long long atoll (const char *);
+double atof (const char *);
+
+float strtof (const char *restrict, char **restrict);
+double strtod (const char *restrict, char **restrict);
+long double strtold (const char *restrict, char **restrict);
+
+
+
+
+
+long strtol (const char *restrict, char **restrict, int);
+unsigned long strtoul (const char *restrict, char **restrict, int);
+long long strtoll (const char *restrict, char **restrict, int);
+unsigned long long strtoull (const char *restrict, char **restrict, int);
+
+int rand (void);
+void srand (unsigned);
+# 52 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
+          void abort (void);
+int atexit (void (*) (void));
+          void exit (int);
+          void _Exit (int);
+# 65 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
+void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
+
+
+
+
+
+__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
+
+int abs (int);
+long labs (long);
+long long llabs (long long);
+
+typedef struct { int quot, rem; } div_t;
+typedef struct { long quot, rem; } ldiv_t;
+typedef struct { long long quot, rem; } lldiv_t;
+
+div_t div (int, int);
+ldiv_t ldiv (long, long);
+lldiv_t lldiv (long long, long long);
+
+
+typedef struct { unsigned int quot, rem; } udiv_t;
+typedef struct { unsigned long quot, rem; } uldiv_t;
+udiv_t udiv (unsigned int, unsigned int);
+uldiv_t uldiv (unsigned long, unsigned long);
+# 104 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
+size_t __ctype_get_mb_cur_max(void);
+# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 2 3
+
+
+
+
+
+
+
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 24 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
+
+
+
+
+
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 1 3
+
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/htc.h" 1 3
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
+# 5 "/opt/microchip/xc8/v2.05/pic/include/htc.h" 2 3
+# 6 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 1 3
+# 509 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 3
 # 1 "/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h" 1 3
 # 44 "/opt/microchip/xc8/v2.05/pic/include/pic18f43k22.h" 3
 # 1 "/opt/microchip/xc8/v2.05/pic/include/__at.h" 1 3
@@ -9365,133 +9490,7 @@ extern volatile __bit nW2 __attribute__((address(0x7B6A)));
 
 
 extern volatile __bit nWRITE2 __attribute__((address(0x7B6A)));
-# 34 "./ADC.h" 2
-# 1 "./PIC_SETUP.h" 1
-# 34 "./PIC_SETUP.h"
-# 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
-# 18 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 1 3
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 1 3
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/musl_xc8.h" 1 3
-# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/features.h" 1 3
-# 11 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-# 21 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
-# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long int wchar_t;
-# 127 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef unsigned size_t;
-# 176 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 212 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-# 52 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-# 65 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-# 104 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-size_t __ctype_get_mb_cur_max(void);
-# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 2 3
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 24 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
-
-
-
-
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 1 3
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/htc.h" 1 3
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
-# 5 "/opt/microchip/xc8/v2.05/pic/include/htc.h" 2 3
-# 6 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 1 3
+# 510 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 2 3
 # 9 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
 # 18 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 3
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
@@ -9528,121 +9527,8 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
-# 35 "./PIC_SETUP.h" 2
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 1 3
-# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
-# 135 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 150 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long intptr_t;
-# 166 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef signed char int8_t;
+# 14 "./ADC.h" 2
 
-
-
-
-typedef short int16_t;
-# 181 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 196 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 217 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 237 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 23 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 155 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 156 "/opt/microchip/xc8/v2.05/pic/include/c99/stdint.h" 2 3
-# 36 "./PIC_SETUP.h" 2
-# 1 "./CONFIGURATIONS.h" 1
-# 37 "./PIC_SETUP.h" 2
-# 1 "./ADC.h" 1
-# 38 "./PIC_SETUP.h" 2
-# 1 "./Interrupt_Service_Routine.h" 1
-# 34 "./Interrupt_Service_Routine.h"
-# 1 "./ADC.h" 1
-# 35 "./Interrupt_Service_Routine.h" 2
-int ADC_VALUE = 0;
-char digital_value = 0;
-uint8_t recived = 0x00;
-uint8_t msg = 0x00;
-
-
-void __attribute__((picinterrupt(("")))) ISR(void);
-# 39 "./PIC_SETUP.h" 2
-# 1 "./SPI.h" 1
-# 34 "./SPI.h"
-# 1 "./PIC_SETUP.h" 1
-# 35 "./SPI.h" 2
-
-
-void SETUP();
-void SPI1_Initialize(void);
-unsigned char SPI1_ExchangeByte(uint8_t data);
-# 40 "./PIC_SETUP.h" 2
-void SETUP(void);
-void set_oscilators(void);
-void init_pins(void);
-void init_interrupts(void);
-# 35 "./ADC.h" 2
 int ADC_Value = 0;
 
 void INIT_ADC(void);

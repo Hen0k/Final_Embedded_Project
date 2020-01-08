@@ -3,7 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/ADC.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/configurations.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/Interrupt_Service_Routine.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/SPI.h</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/ADC.h</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/ACTUATOR.h</file>
             <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/main.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/SPI.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/PIC_SETUP.c</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/CONFIGURATIONS.h</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/PIC_SETUP.h</file>
+            <file>file:/home/henok/Dev-env/MPLABXProjects/Final_Embedded_Project.X/Interrupt_Service_Routine.h</file>
         </group>
     </open-files>
 </project-private>

@@ -1,4 +1,3 @@
-#include <pic18f43k22.h>
 #include "PIC_SETUP.h"
 
 
