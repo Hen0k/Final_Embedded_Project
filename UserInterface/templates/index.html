@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="refresh" content="32"/>
+		<title>
+			Display Data
+		</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'w3.css') }}">
+
+        <style>
+		.container{
+	            width:100%;
+		    height:60em; 
+		}
+                #nav{
+                    width:100%;
+		 
+		    background-color:black;
+                    color:white;
+		   
+
+	           }
+	         .cbody{
+                    height:40em;
+                   
+                    margin-top:2em; 
+		    width:80%;
+		 }
+		.footer{
+		     width:100%;
+		     height:3em;
+		     background-color:black;
+		     color:white;
+		     text-align:center;
+		     margin-top:30px;
+		}
+		.btn{
+		     width:10%;
+		     height:30px;
+		     background-color:black;
+		     color:white;
+		}
+		.btn:hover{
+		     cursor: pointer;
+		}
+	       	#newtab{
+	             border-collapse: collapse;
+                     border-spacing: 0;
+                     width:70%;           
+		     margin-left:30%;
+                     border: 1px solid #ddd;
+		    /* max-height:42em;*/
+		}
+	
+				
+		  </style>
+                    	<script src="{{ url_for('static', filename = 'canvasjs.min.js') }}"></script>
+			 </head>
+			 <body>
+				 <div class="container">
+				 <div id="nav" class="w3-bar w3-black">
+			          <a href="/" class="w3-bar-item w3-button">home</a>	
+				 <a href="/index" class="w3-bar-item w3-button">Video Stream</a>	
+                                
+
+				 </div>
+				  <div id="chartContainer"  style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+				  <div class="cbody">
+					
+					 <table id="newtab" class="w3-table-all">
+                                            <thead>
+                                                  <tr id="the" class="w3-black">
+							    
+					            		  <th>ID</th>
+							         <th>Name</th>
+							         <th>Value</th>
+					             <th>Time</th>
+				           </tr>
+					    </thead>
+						 {% for data in result %}
+				           <tr>
+						 {% for val in data %}
+					             <td>{{ val }}</td>
+						 {% endfor %}
+			                   </tr>
+						 {% endfor %}
+		       </table>
+		    </div>
+		</div>
+               	      <div class="footer">
+                  <p>Footer</p>
+		    </div>
+				<script>
+					// document.getElementById('newbtn').value = "OFF";
+					function onoff(){
+							val = document.getElementById('newbtn').value;
+							if(val=="ON"){
+									document.getElementById('newbtn').value = "OFF";
+							}
+							else{
+									document.getElementById('newbtn').value = "ON";
+							}
+					}
+			</script>
+                       <script>
+			window.onload = function () {
+				
+				var chart = new CanvasJS.Chart("chartContainer", {
+					animationEnabled: true,
+					theme: "light2",
+					title:{
+						text: "Simple Line Chart for the potentiometer value"
+					},
+					axisY:{
+						includeZero: false
+					},
+					data: [{
+						type: "line",
+						dataPoints: [
+							
+							 {% for val in range(1,len,2) %}
+							   {x:{{result_gra[val][0]}},y:{{result_gra[val][2]}}},
+			                                
+                                                       {% endfor %}
+
+						]
+					}]
+				});
+				chart.render();
+		}
+                     
+		      
+			</script>
+			 </body>
+</html>
