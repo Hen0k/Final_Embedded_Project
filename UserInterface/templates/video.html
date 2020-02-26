@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'w3.css') }}">
+
+<style>
+		.btn{
+		     width:15%;
+		     height:30px;
+		     background-color:black;
+		     color:white;
+		     margin-left:35%;
+		}
+		.btn:hover{
+		     cursor: pointer;
+		}
+		.actcont{
+	            margin-top:50px;
+		    margin-left:20%;
+		    height:250px;
+		    width:60%;
+		}
+		.container{
+                 height:200px;
+		}
+		
+               .blabel{
+                    margin-left:30%;
+	       }
+</style>
+    <title>Live Streaming Demonstration</title>
+</head>
+<body>
+<div class="container">
+	<div id="nav" class="w3-bar w3-black">
+		                  <a href="/" class="w3-bar-item w3-button">home</a>	
+			       	  <a href="/index" class="w3-bar-item w3-button">Video Stream</a>	
+                                
+
+				 </div>
+        <div class="actcont">
+				 <form method='POST' action= "{{ url_for('index') }}">
+					 <label class="blabel">Led On/OFF</label><br/>
+						 <input type='submit' class="btn" name="on_off" value={{msg}} />
+			
+                                 </form>
+                                 <form method='POST' action= "{{ url_for('buzzer_off') }}">
+					 <label class="blabel">Buzzer OFF</label><br/>
+				 
+				 <input type='submit' class="btn"  name="on_off" value="OFF" />
+			
+                                 </form>
+  
+
+
+	<div>
+        <div>
+            <h3 >Live Streaming</h3>
+            <img src="{{ url_for('video_feed') }}" height="700px" width="90%">
+        </div>
+	 
+	</div>
+       	
+    </div>
+ 
+
+</div>
+</body>
+</html>
+
